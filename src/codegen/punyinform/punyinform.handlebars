@@ -1,0 +1,11 @@
+{{#each map.rooms}} 
+Ojbect {{this.name}} "{{{this.name}}}"
+  with description
+       "{{{this.description}}}"
+  {{#each this.connections}}
+  {{dirToStr this.startDir this.startType}}_TO  {{{className this.room.name}}} 
+  {{/each}}
+;
+
+{{#each this.objects}}{{buildObject this}}{{/each}}
+{{/each}} 

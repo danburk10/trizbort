@@ -8,7 +8,7 @@ import { Map } from '../../models';
 import { Exporter } from '../../Exporter';
 import { IdToast, Window } from '../../controls';
 
-import { CodeGenerator, TadsGenerator, Inform7Generator, Alan2Generator, Alan3Generator, 
+import { CodeGenerator, TadsGenerator, Inform7Generator, PunyInformGenerator, Alan2Generator, Alan3Generator, 
          QuestGenerator, TextadventurejsGenerator, YamlGenerator, ZilGenerator } from '../../codegen/CodeGeneration'
 
 
@@ -41,6 +41,7 @@ export class MenuPanel extends Panel {
     this.createMenuGroup('#group-export');
     this.createMenuItem('#menu-export-tads', () => { this.actionGenerateCode(new TadsGenerator(App.map), 't3'); });
     this.createMenuItem('#menu-export-inform7', () => { this.actionGenerateCode(new Inform7Generator(App.map), 'ni'); });
+    this.createMenuItem('#menu-export-punyinform', () => { this.actionGenerateCode(new PunyInformGenerator(App.map), 'ni'); });
     this.createMenuItem('#menu-export-alan2', () => { this.actionGenerateCode(new Alan2Generator(App.map), 'a2c'); });
     this.createMenuItem('#menu-export-alan3', () => { this.actionGenerateCode(new Alan3Generator(App.map), 'a3c'); });
     this.createMenuItem('#menu-export-quest', () => { this.actionGenerateCode(new QuestGenerator(App.map), 'aslx'); });

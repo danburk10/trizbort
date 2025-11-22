@@ -1,7 +1,7 @@
 {{#each map.rooms}} 
 Object {{this.name}} "{{{this.name}}}"
   with description
-       "{{{this.description}}}"
+       "{{{this.description}}}",
   {{#each this.connections}}
   {{dirToStr this.startDir this.startType}}_TO  {{{className this.room.name}}} 
   {{/each}}
